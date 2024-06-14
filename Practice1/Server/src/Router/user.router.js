@@ -60,8 +60,16 @@ router.get("/hello/:id([0-9]{5})", (req, res)=>{
 })
 
 
+// now this router for only latter params handle
+router.get("/:title([a-zA-Z]+)", (req, res)=>{
+    res.send(`the title is: ${req.params.title}`)
+})
 
+// now the router for latter and number params handler
 
+router.get("/:title([a-zA-Z0-9]+)", (req, res)=>{
+    res.send(`the title is: ${req.params.title}`)
+})
 
 
 
