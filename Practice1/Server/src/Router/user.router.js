@@ -37,5 +37,33 @@ router.get('/userId/:Id/userName/:name', (req, res)=>{
 
 
 
+// testing header data request 
+router.get('/headerData', (req, res) => {
+    const name = req.header("name");
+    const age = req.header("age");
+    res.send(`<h3>The user name Is:${name}, User age is ${age}</h3> are provide from header data`);
+})
+
+
+// routing regular expression handler, 
+// it's can specify for latter or number requ validation
+
+router.get("/:id([0-9]+)", (req, res) => {
+    res.send(`the id is ${req.params.id}`)
+})
+
+
+// highst id number limit set handler 
+// highst id number limit set handler 
+router.get("/hello/:id([0-9]{5})", (req, res)=>{
+    res.send(`the id is ${req.params.id}`)
+})
+
+
+
+
+
+
+
 
 module.exports = router;
