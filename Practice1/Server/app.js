@@ -8,6 +8,12 @@ app.use("/user", userRoutes)
 
 
 
+
+
+
+
+
+
 // home route
 app.get("/", (req, res) => {
     res.send("this is Express js home page")
