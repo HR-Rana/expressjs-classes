@@ -23,9 +23,17 @@ router.get("/Hello", (req, res)=>{
 
 // send html or any files, but it's didn't work..!
 router.get("/getHtml", (req, res)=>{
-   res.sendFile(__dirname+"Assist/Index.html")
+   res.sendFile(__dirname + "/../Assist/index.html")
 })
 
+
+// handle multiple params requ
+router.get('/userId/:Id/userName/:name', (req, res)=>{
+    const id = req.params.Id;
+    const name = req.params.name;
+
+    res.send(`<h3>User name is ${name}, and user Id is ${id}</h3>`);
+})
 
 
 

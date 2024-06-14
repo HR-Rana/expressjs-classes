@@ -9,8 +9,10 @@ app.use("/user", userRoutes)
 
 
 
-
-
+// this is succeed because file path is correct..
+app.get("/html", (req, res) => {
+    res.sendFile(__dirname + "/src/Assist/index.html")
+})
 
 
 
@@ -25,3 +27,5 @@ app.use((req,res)=>{
 })
 
 module.exports = app;
+
+
