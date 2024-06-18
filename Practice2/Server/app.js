@@ -1,12 +1,16 @@
 const express = require('express');
 const app = express();
 const simpleRouter = require('./Routers/SimpleRoutes')
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
 
 
 // simple router handling...
-app.use("/simpleRouting", simpleRouter)
-
-
+app.use("", simpleRouter)
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
+app.use(cors())
 
 
 
