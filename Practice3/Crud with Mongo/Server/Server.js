@@ -1,6 +1,11 @@
-
+const config = require('./Config/Config');
 const app = require("./app");
-const port = 3001;
+
+
+const port = config.app.port
+
+
+
 
 
 
