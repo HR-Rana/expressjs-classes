@@ -3,6 +3,8 @@ const { GetUser, CreateUser, UpdateUser, DeleteUser, GetUserByPhoneNumber } = re
 const router = express.Router();
 
 
+
+// Get or Read user Router
 router.get('/users', GetUser);
 
 // get Single user
